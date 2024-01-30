@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+
+    <div class="AddProjects">
+         <form action="/ProfilePage" method="POST"> 
+          <label for="title">Project Name:</label>
+          <input type="text" id="title" name="title" required > 
+          <label for="idea">Ideation: </label>
+          <input type="text" id="idea" name="idea" required>
+          <label for="driveLink">Link:</label>
+          <input type="url" id="driveLink" name="driveLink">
+          <label for="GitLink">github Link:</label>
+          <input type="url" id="GitLink" name="GitLink">
+          <label for="imagepro">Image:</label>
+          <input type="image" id="imagepro" name="imagepro">
+          <label for="video">Video</label>
+          <input type="file" accept="video/*" id="video" name="video">
+          <button>Submit</button>
+        </form>
+      </div>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
