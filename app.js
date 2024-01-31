@@ -78,7 +78,7 @@ app.get('/',(req,res)=>{
 // });
 
 //blog routes
-app.use('/projects',ProjectRoute);
+app.use('/projects',projectroute);
 
 //404 page
 app.use((req,res)=>{

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="POR">
+        <div class="porheading">Position of Responsibility</div>
+                
+                <form  action="/ProfilePage" method="POST">
+                    <input type="text" class="custom-input" placeholder="Club- Position of Responsibility" />
+                    <button onclick="processInput()">
+                        <div class="addbutton">+</div>
+                    </button>
+                </form>
+    </div>
+    
+    <div class="Project content">
+        <h2>Your Projects</h2>
+        <% if (projects.length >0){ %>
+           
+            <% projects.forEach(blog=>{ %>
+                <a class="single" href="/projects/<%= project._id%>">
+                    
+                    <!-- <h2><%= project.title %></h2>
+                    to get the content;
+                    futher write the way you want the data to display -->
+
+                </a>
+            <% }) %>
+        <% } else{ %>  
+            <p>No Projects to show </p>
+        <% } %>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+
+
+</body>
+</html>

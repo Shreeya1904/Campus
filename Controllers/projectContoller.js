@@ -3,7 +3,7 @@ const Project=require('../Models/project');
 const project_index =(req,res)=>{
     Project.find().sort({createdAt:-1})
     .then((result)=>{
-        res.render('profile_page/index',{title:'Your Projects',project: result})
+        res.render('profile_page/index',{title:'Your Projects',projects: result})
     })
     .catch((err)=>{
         console.log(err);
@@ -13,9 +13,9 @@ const project_index =(req,res)=>{
 const project_details=(req,res)=>{
     const id=req.params.id;
     console.log(id);
-    Blog.findById(id)
+    Project.findById(id)
         .then(result=>{
-            res.render('projects/details',{project: result, title:'Blog Details'})
+            res.render('projects/details',{project: result, title:'Project Details'})
         })
         .catch((err)=>{
             res.status(404).render('404',{title:'Project not found'});
