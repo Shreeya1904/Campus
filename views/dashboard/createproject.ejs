@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="../csv files/createproject.csv" />
 
 <body>
     <%- include('../partials/nav.ejs') %>
@@ -12,14 +13,18 @@
           <input type="text" id="title" name="title" required > 
           <label for="idea">Ideation: </label>
           <input type="text" id="idea" name="idea" required>
-          <label for="driveLink">Link:</label>
-          <input type="url" id="driveLink" name="driveLink">
-          <label for="GitLink">github Link:</label>
-          <input type="url" id="GitLink" name="GitLink">
-          <label for="imagepro">Image:</label>
-          <input type="image" id="imagepro" name="imagepro">
+          <label for="skill">Skills: </label>
+          <input type="text" id="skill" name="skill" required>
+          <label for="drivelink">Link:</label>
+          <input type="url" id="drivelink" name="drivelink">
+          <label for="gitlink">github Link:</label>
+          <input type="url" id="gitlink" name="gitlink">
+          <label for="image">Image:</label>
+          <input type="image" id="image" name="image">
           <label for="video">Video</label>
           <input type="file" accept="video/*" id="video" name="video">
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password" required>
           <button>Submit</button>
         </form>
       </div>
